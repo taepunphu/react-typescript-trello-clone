@@ -16,11 +16,11 @@ export const Column = ({ text, id }: ColumnProps) => {
   return (
     <ColumnContainer>
       <ColumnTitle>{text}</ColumnTitle>
-      {tasks.map((task) => {
-        <Card text={task.text} id={task.id} key={task.id} />
-      })}
+      {tasks.map((task) => (
+        <Card text={task.text} key={task.id} id={task.id} />
+      ))}
       <AddNewItem
-        toggleButtonText="+ Add nother task"
+        toggleButtonText="+ Add another task"
         onAdd={console.log}
         dark
       />
